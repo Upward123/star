@@ -1,0 +1,92 @@
+/* 资料页面开始 */
+.file {
+    width: 960px;
+    margin: 0 auto 15px;
+}
+
+/* up部分开始 */
+.file .up {
+    height: 50px;
+    line-height: 50px;
+}
+
+.file .up span {
+    float: left;
+    color: #333;
+}
+
+.file .up a {
+    float: right;
+    color: #333;
+}
+
+.file .up a:hover {
+    color: #afdcff;
+}
+
+/* up部分结束 */
+
+/* down部分开始 */
+.file .down li {
+    height: 300px;
+    width: 300px;
+    background-color: #fff;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.file .down li:hover {
+    position: relative;
+    top: -5px;
+    left: -5px;
+    box-shadow: 10px 10px 30px #ccc;
+}
+
+.file .down .every {
+    width: 300px;
+    height: 220px;
+    overflow: hidden;
+}
+
+.file .down .every img {
+    margin-left: 35px;
+    margin-top: 33px;
+    height: 100%;
+}
+
+.file .down li:nth-child(3n-1){
+    margin: 0 30px;
+}
+
+.file .down .txt-div {
+    color: #666;
+    line-height: 40px;
+    margin-left: 20px;
+}
+
+.file .down .txt-div .price {
+    color: #f00;
+} 
+
+.file .down .txt-div a {
+    width: 38px;
+    height: 23px;
+    line-height: 25px;
+    color: #fff;
+    float: right;
+    border: 1px solid #afdcff;
+    background-color: #afdcff;
+    text-align: center;
+    margin: 7px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.file .down .txt-div a:hover {
+    color: #afdcff;
+    background-color: #fff;
+}
+
+/* down部分结束 */
+
+/* 资料页面结束 */

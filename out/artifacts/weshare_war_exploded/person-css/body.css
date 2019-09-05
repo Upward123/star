@@ -1,0 +1,187 @@
+/* 主体部分开始 */
+.personal {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* title部分开始 */
+.personal-title {
+    line-height: 40px;
+    font-size: 14px;
+    color: #666;
+}
+
+.personal-title a:hover {
+    color: #f00;
+}
+
+/* title部分结束 */
+
+/* body部分开始 */
+.personal-body {
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background-color: #fff;
+}
+
+/* 头像栏部分开始 */
+.personal-body .avator {
+    width: 860px;
+    height: 200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.personal-body .avator .avator-left,
+.personal-body .avator .avator-right {
+    width: 430px;
+    height: 150px;
+    float: left;
+}
+
+.personal-body .avator-left img,
+.personal-body .avator-left div {
+    float: left;
+}
+
+.personal-body .avator-left .avator-left-txt {
+    margin-left: 20px;
+    padding: 25px 0;
+}
+
+.personal-body .avator-left-txt h1 {
+    line-height: 50px;
+    font-weight: 700;
+    color: #666;
+}
+
+.personal-body .avator-left-txt h5 {
+    font-weight: 400;
+    color: #333;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.personal-body .avator-left-txt h5 span:nth-child(2) {
+	color: #f00;
+}
+
+.personal-body .avator-left-txt a {
+    line-height: 50px;
+    font-size: 14px;
+    color: #afdcff;
+}
+
+.personal-body .avator-left-txt a:hover {
+    color: #f00;
+}
+
+.personal-body .avator-right a {
+    width: 96px;
+    height: 46px;
+    line-height: 46px;
+    display: block;
+    background-color: #afdcff;
+    margin-top: 50px;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid #afdcff;
+}
+
+.personal-body .avator-right a span {
+    width: 96px;
+    height: 46px;
+    display: block;
+    text-align: center;
+}
+
+.personal-body .avator-right a:hover {
+    background-color: #fff;
+    color: #afdcff;
+}
+
+/* 头像栏部分结束 */
+
+/* 资料展示栏开始 */
+.personal-body .file-display {
+    width: 860px;
+    margin: 50px auto;
+}
+
+.personal-body .file-display .file {
+    width: 860px;
+    height: 100px;
+    padding: 15px 0;
+    border-bottom: 1px solid #999;
+}
+
+.personal-body .file-display .file:last-child {
+    border: 0;
+}
+
+.personal-body .file-display .file-icon,
+.personal-body .file-display .file-name {
+    float: left;
+}  
+
+.personal-body .file-display .file-upload {
+    float: right;
+}
+
+.personal-body .file-icon {
+    padding-right: 20px;
+}
+
+.personal-body .file-icon .img-div {
+    width: 150px;
+    height: 60px;
+    text-align: center;
+}
+
+.personal-body .file-icon .txt-div {
+    width: 150px;
+    height: 10px;
+    line-height: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.personal-body .file-name {
+    padding-left: 20px;
+    border-left: 1px solid #e0e0e0;
+}
+
+.personal-body .file-name span {
+    line-height: 70px;
+    color: #333;
+    font-size: 14px;
+}
+
+.personal-body .file-upload {
+    height: 70px;
+}
+
+.personal-body .file-upload a {
+    display: block;
+    width: 46px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 5px;
+    border: 2px solid #afdcff;
+    background-color: #afdcff;
+    color: #fff;
+    text-align: center;
+}
+
+.personal-body .file-upload a:hover {
+    background-color: #fff;
+    color: #afdcff;
+}
+
+/* 资料展示栏结束 */
+
+/* body部分结束 */
+
+/* 主体部分结束 */

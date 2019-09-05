@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+ <hibernate-mapping>
+    <!-- hbm配置文件的作用是
+    	（1）映射类和表
+    	（2）映射属性和字段 
+    	 name:javaBeans类中的属性名字
+    	 column：数据库中的字段名字
+     -->
+    <class name="com.weshare.entity.Records" table="01_Records">
+	    <id name="RId" column="RId">
+	    	<!-- 主键生成策略 -->
+	    	<generator class="native"/>
+	    </id>
+	    <property name="Time" column="Time"/>
+	    <property name="Type" column="Type"/>
+	    
+	    <!-- 记录Records作为外键表，资料File作为主键表，外键关联 -->
+	    <!-- 记录(Records)-资料(File) 一对一映射 -->
+	    <many-to-one name="file"
+		class="com.weshare.entity.FileCdut"
+		column="FileId" cascade="all" lazy="false" unique="true"/>
+    </class>
+</hibernate-mapping>

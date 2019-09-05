@@ -1,0 +1,39 @@
+css背景颜色渐变 http://caibaojian.com/css3-background-gradient.html
+css蒙版效果 https://www.cnblogs.com/leidan/p/9710810.html
+css倒影 https://www.html.cn/book/css/properties/only-webkit/box-reflect.htm
+
+
+
+h5的地理信息
+h5的缓存
+h5的web worker
+h5 svg
+h5 拖放
+h5web socket
+
+移动端 混合app开发
+
+es6
+阮一峰的 es6入门
+
+vuex 以及vue的UI框架
+
+前端常见框架  bootstrap
+
+react flex reduce  cerate-react-app
+
+前端的性能优化  雅虎军规
+
+数据结构与算法
+webpack性能优化
+
+后台
+node
+	expres
+	koa
+
+
+数据库
+	
+
+项目

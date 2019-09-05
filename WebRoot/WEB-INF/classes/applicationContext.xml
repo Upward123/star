@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	<!-- 配置数据源 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/weshare" />
+		<property name="user" value="root" />
+		<property name="password" value="123456" />
+		<property name="minPoolSize" value="5" />
+		<property name="maxPoolSize" value="10" />
+	</bean>
+	<!-- 配置Hibernate的sessionFactory实例 -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<!-- 配置数据源属性 -->
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<!-- 配置 Hibernate的基本属性 -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>  
+                <prop key="hibernate.show_sql">true</prop> 
+			</props>
+		</property>
+		<!-- 配置 Hibernate映射文件的位置及名称 -->
+		<property name="mappingResources">
+			<list>
+				<value>com/weshare/entity/Users.hbm.xml</value>
+				<value>com/weshare/entity/Courses.hbm.xml</value>
+				<value>com/weshare/entity/FileCdut.hbm.xml</value>
+				<value>com/weshare/entity/Profession.hbm.xml</value>
+				<value>com/weshare/entity/Records.hbm.xml</value>
+				<value>com/weshare/entity/User.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 声明Hibernate事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- 定义事务通知 ,需要事务管理器 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<!-- 指定事务传播规则 -->
+		<tx:attributes>
+			<!-- 对所有方法应用REQUIRED事务规则 -->
+			<tx:method name="*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+	<!--定义切面，并将事务通知和切面组合（定义哪些方法应用事务规则） -->
+	<aop:config>
+		<!-- 对com.restaurant.service包下的所有类的所有方法都应用事务规则 -->
+		<aop:pointcut id="serviceMethods"
+			expression="execution(* com.weshare.service.*.*(..))" />
+		<!-- 将事务通知和切面组合 -->
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethods" />
+	</aop:config>
+
+	<!-- 实例化UsersDAOImpl类 -->
+	<bean id="usersDAO" class="com.weshare.dao.impl.UsersDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 实例化UsersServiceImpl类 -->
+	<bean id="usersService" class="com.weshare.service.impl.UsersServiceImpl">
+		<property name="usersDAO" ref="usersDAO" />
+	</bean>
+
+	<!-- 实例化UsersAction类 ，并为其中属性usersService注入值 -->
+	<bean name="usersAction" class="com.weshare.action.UsersAction" scope="prototype">
+		<property name="usersService" ref="usersService" />
+	</bean>
+	
+	
+	<!-- 实例化BaseDaoImpl,注入sessionFactory -->
+	<bean name="baseDao" class="com.weshare.dao.impl.BaseDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<!-- 实例化CoursesDAOImpl -->
+	<bean name="coursesDAO" class="com.weshare.dao.impl.CoursesDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<!-- 实例化FileCdutDAOImpl -->
+	<bean name="fileDAO" class="com.weshare.dao.impl.FileCdutDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<!-- 实例化ProfessionDAOImpl -->
+	<bean name="professionDAO" class="com.weshare.dao.impl.ProfessionDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<!-- 实例化RecordsDAOImpl -->
+	<bean name="recordsDAO" class="com.weshare.dao.impl.RecordsDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<!-- 实例化UserDAOImpl -->
+	<bean name="userDAO" class="com.weshare.dao.impl.UserDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<!-- 实例化CoursesServiceImpl -->
+	<bean name="coursesService" class="com.weshare.service.impl.CoursesServiceImpl">
+		<property name="coursesDAO" ref="coursesDAO" />
+	</bean>
+	
+	<!-- 实例化FileServiceImpl -->
+	<bean name="fileService" class="com.weshare.service.impl.FileCdutServiceImpl">
+		<property name="fileDAO" ref="fileDAO" />
+	</bean>
+	
+	<!-- 实例化ProfessionServiceImpl -->
+	<bean name="professionService" class="com.weshare.service.impl.ProfessionServiceImpl">
+		<property name="proDAO" ref="professionDAO" />
+	</bean>
+	
+	<!-- 实例化RecordsServiceImpl -->
+	<bean name="recordsService" class="com.weshare.service.impl.RecordsServiceImpl">
+		<property name="recordsDAO" ref="recordsDAO" />
+	</bean>
+	
+	<!-- 实例化UserServiceImpl -->
+	<bean name="userService" class="com.weshare.service.impl.UserServiceImpl">
+		<property name="userDAO" ref="userDAO" />
+	</bean>
+	
+	<!-- 实例化UserServiceImpl -->
+	<bean name="userAction" class="com.weshare.action.UserAction" scope="prototype">
+		<property name="userService" ref="userService" />
+	</bean>
+	
+	<!-- 实例化 ShareShowAction-->
+	<bean name="shareShowAction" class="com.weshare.action.ShareShowAction" scope="prototype">
+		<property name="professionService" ref="professionService" />
+		<property name="fileService" ref="fileService" />
+		<property name="coursesService" ref="coursesService" />
+	</bean>
+	
+	<bean name="fileAction" class="com.weshare.action.FileAction" scope="prototype">
+		<property name="fileService" ref="fileService" />
+		<property name="professionService" ref="professionService" />
+		<property name="courseSercive" ref="coursesService" />
+		<property name="userService" ref="userService" />
+	</bean>
+	
+<!-- 	<bean id="requestParseWrapper" class="com.weshare.entity.RequestParseWrapper">
+	</bean> -->
+	
+</beans>
+

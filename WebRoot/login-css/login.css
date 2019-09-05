@@ -1,0 +1,107 @@
+/* 登录页面开始 */
+.login-div {
+    margin: 0 auto;
+}
+
+.login-div img {
+    display: block;
+    margin: 20px auto;
+}
+
+/* 登录框开始 */
+.login-div .s-login-div {
+    margin: 20px auto;
+    width: fit-content;
+    border: 3px solid #afdcff;
+    border-radius: 50px;
+    background-color: #fff;
+}
+
+.s-login-div ul {
+    margin: 50px 75px;
+}
+
+.s-login-div ul li {
+    margin: 15px auto;
+    /* text-align: center; */
+}
+
+.s-login-div ul li:last-child {
+	text-align: center;
+}
+
+.s-login-div li .left-txt {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    color: #666;
+    font-size: 16px;
+}
+
+.s-login-div li input {
+    width: 170px;
+    height: 30px;
+    border: 1px solid #afdcff;
+    font-size: 12px;
+    outline: 0;
+}
+
+.s-login-div li .no-see-div,
+.s-login-div li .see-div {
+    display: inline-block;
+    position: relative;
+}
+
+.s-login-div .no-see-div img,
+.s-login-div .see-div img{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    margin: 0;
+}
+
+.s-login-div li .right-txt {
+    color: red;
+    margin-left: 100px;
+    font-size: 12px;
+    display: block;
+    line-height: 30px;
+}
+
+.s-login-div li a {
+    color: #2a97ec;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+/* 登录框结束 */
+
+.login-div .button-div {
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+}
+
+.button-div button {
+    background-color: #afdcff;
+    color: #fff;
+    border: 2px solid #afdcff;
+    text-align: center;
+    border-radius: 10px;
+    width: 70px;
+    cursor: pointer;
+}
+
+.button-div button:hover{
+    background-color: #fff;
+    color: #afdcff;
+}
+
+.button-div button span {
+    line-height: 40px;
+    font-size: 16px; 
+}
+
+/* 登录页面结束 */

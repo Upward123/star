@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+ <hibernate-mapping>
+    <!-- hbm配置文件的作用是
+    	（1）映射类和表
+    	（2）映射属性和字段 
+    	 name:javaBeans类中的属性名字
+    	 column：数据库中的字段名字
+     -->
+    <class name="com.weshare.entity.FileCdut" table="01_File">
+    	<id name="FId" column="FId">
+    		<generator class="native" />
+    	</id>
+	    <property name="Contributor" column="Contributor"/>
+	    <property name="FPoint" column="FPoint"/>
+		<property name="UploadTime" column="UploadTime"/>
+		<property name="DownloadCount" column="DownloadCount"/>
+		<property name="FileName" column="FileName"/>
+		<property name="FilePath" column="FilePath"/>
+		<property name="ContributorId" column="ContributorId"/>
+
+		<!-- 资料(file)-课程(courses) 多对一映射 -->
+		<many-to-one name="courses" column="CourseId" lazy="false"></many-to-one>
+    </class>
+</hibernate-mapping>

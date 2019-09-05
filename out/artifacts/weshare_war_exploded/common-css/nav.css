@@ -1,0 +1,62 @@
+/* 导航栏部分开始 */
+/* 左边开始 */
+.nav-box {
+    height: 50px; 
+}
+
+.nav {
+    height: 50px;
+    background-color: #565656;
+}
+
+.nav-body {
+    width: 960px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.nav-left {
+    float: left;
+}
+
+.nav-left li {
+    width: 110px;
+    color: #b0b0b0;
+    line-height: 50px;
+    font-size: 16px;
+}
+/* 左边结束 */
+/* 右边开始 */
+.nav-right {
+    float: right;
+}
+
+.nav-right li {
+    line-height: 50px;
+    float: right;
+    color: #b0b0b0;
+    margin-left: 5px;
+}
+
+.nav-right li a {
+    color: #b0b0b0;
+}
+
+.nav-right li a:hover {
+    color: #afdcff;
+}
+
+.nav-right li:first-child {
+    margin-left: 20px;
+}
+
+.nav-right li:first-child img {
+    vertical-align: middle;
+}
+
+.nav-right li:first-child a {
+    vertical-align: middle;
+}
+/* 右边结束 */
+/* 导航栏部分结束 */
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.weshare.entity">
+	<class name="Users" table="users" catalog="weshare">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="native"></generator>
+		</id>
+		<property name="loginName" type="java.lang.String">
+			<column name="LoginName" length="20" not-null="true" />
+		</property>
+		<property name="loginPwd" type="java.lang.String">
+			<column name="LoginPwd" length="20" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>

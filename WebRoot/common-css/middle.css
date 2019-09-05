@@ -1,0 +1,77 @@
+/* 中间部分开始 */
+.middle {
+    height: 225px;
+    border: 1px solid #fff;
+    background-color: #fff;
+}
+
+.middle-body {
+    width: 960px;
+    margin: 40px auto;
+}
+
+/* 左边开始 */
+
+.middle-body dl {
+    width: 120px;
+    float: left;
+}
+
+.middle-body dl:nth-child(6) { 
+    border-right: 2px solid #f5f5f5;
+}
+
+.middle-body dl dt {
+    height: 60px;
+    color: #333;
+}
+
+.middle-body dl dd {
+    height: 30px;
+    color: #666;
+    font-size: 14px;
+}
+
+.middle-body dl a:hover dd {
+    color: #afdcff;
+}
+
+/* 左边结束 */
+
+/* 右边开始 */
+
+.middle-body .middle-right {
+    width: 160px;
+    margin-left: 50px;
+}
+
+.middle-body .middle-right dt {
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    color: #afdcff;
+    font-size: 24px;
+    text-align: center;
+}
+
+.middle-body .middle-right dd {
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.middle-body .middle-right dd:last-child{
+    height: 36px;
+    line-height: 36px;
+    margin-top: 20px;
+    border: 2px solid #afdcff;
+}
+
+.middle-body .middle-right dd:last-child:hover {
+    background-color: #afdcff;
+    color: #fff;
+}
+
+/* 右边结束 */
+
+/* 中间部分结束 */

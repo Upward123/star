@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+ <hibernate-mapping>
+    <!-- hbm配置文件的作用是
+    	（1）映射类和表
+    	（2）映射属性和字段 
+    	 name:javaBeans类中的属性名字
+    	 column：数据库中的字段名字
+     -->
+	<class name="model.Ad" table="01_Ad">
+    	<id name="AId" column="AId">
+    		<generator class="native" />
+    	</id>
+    	<property name="AdImag" column="AdImag"/>
+		<property name="AdDescription" column="AdDescription"/>
+    </class>
+</hibernate-mapping>

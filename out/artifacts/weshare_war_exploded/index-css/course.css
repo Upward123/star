@@ -1,0 +1,71 @@
+/* 课程页面开始 */
+.course {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* up部分开始 */
+.course .up {
+    height: 50px;
+    line-height: 50px;
+}
+
+.course .up span {
+    float: left;
+    color: #333;
+}
+
+.course .up a {
+    float: right;
+    color: #333;
+}
+
+.course .up a:hover {
+    color: #afdcff;
+}
+
+/* up部分结束 */
+
+/* down部分开始 */
+.course .down li {
+    height: 300px;
+    width: 300px;
+    background-color: #fff;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.course .down li:hover {
+    position: relative;
+    top: -5px;
+    left: -5px;
+    box-shadow: 10px 10px 30px #ccc;
+}
+
+.course .down li .image {
+    width: 300px;
+    height: 220px;
+    overflow: hidden;
+}
+
+.course .down li img {
+    width: 100%;
+}
+
+.course .down li:nth-child(3n-1){
+    margin: 0 30px;
+}
+
+/* .course .down li:last-child {
+    float: right;
+} */
+
+.course .down .txt {
+    color: #666;
+    line-height: 80px;
+    margin-left: 20px;
+}
+
+/* down部分结束 */
+
+/* 课程页面结束 */

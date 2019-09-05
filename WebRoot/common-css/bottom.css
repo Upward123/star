@@ -1,0 +1,53 @@
+/* 底栏部分开始 */
+.bottom { 
+    width: 960px;
+    padding: 30px 0 100px;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+a {
+    color: #666;
+}
+
+a:hover {
+    color: #afdcff;
+}
+
+
+/* 左边开始 */
+.bottom .left,
+.bottom .right {
+    float: left;
+}
+
+.bottom .left img {
+    height: 60px;
+}
+/* 左边结束 */
+
+/* 右边开始 */
+.bottom .right {
+    line-height: 30px;
+}
+
+.bottom .right div:first-child {
+    margin-left: 10px;
+}
+
+.bottom .right ul li{
+    float: left; 
+}
+
+.bottom .right ul li a {
+    padding: 0 10px;
+    border-right: 1px solid #ccc;
+}
+
+.bottom .right ul li:last-child a {
+    border: 0;
+}
+
+/* 右边结束 */
+
+/* 底栏部分结束 */

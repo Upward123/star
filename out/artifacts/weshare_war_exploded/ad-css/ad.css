@@ -1,0 +1,15 @@
+.ad-body {
+    width: 960px;
+    margin: 20px auto;
+}
+
+.picture {
+    text-align: center;
+}
+
+.txt {
+    text-align: center;
+    line-height: 10px;
+    color: #b0b0b0;
+    margin: 20px auto;
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<bean type="org.apache.struts2.dispatcher.multipart.MultiPartRequest"
+			name="myRequestParser" class="com.weshare.entity.RequestParseWrapper"
+			scope="default" optional="true" />
+	<constant name="struts.multipart.handler" value="myRequestParser" />
+	<constant name="struts.multipart.maxSize" value="10000000"/>
+	
+	 <constant name="struts.action.excludePattern" value="/servlet/.*"/>
+	<!--定义名称为digital的包，继承struts 2的默认包，指定命名空间为"/" -->
+	<package name="weshare" namespace="/" extends="struts-default">
+	<!--   配置拦截器 -->
+	    <interceptors>
+	       <interceptor name="loginCheck" class="com.weshare.interceptor.AuthorityInterceptor"/>
+	    </interceptors>
+		<!-- 为类中的方法配置映射 -->
+	
+		<!-- 为类中的方法配置映射 -->
+		<!-- 1.登录方法测试测试 -->
+		<action name="doLogins2" class="usersAction" method="doLogins2">
+			<result name="index" >index.jsp</result>
+			<result name="login" type="dispatcher">login.jsp</result>
+		</action>
+		
+		<!-- 1.登录方法 -->
+		<action name="doLogin" class="userAction" method="doLogin">
+			<result name="success" type="redirect">weShare</result>
+			<result name="login">/login.jsp</result>
+		</action>
+		
+		
+		<!-- 2.注册方法 -->
+		<action name="doRegister" class="userAction" method="doRegister">
+		     <result name="login">/login.jsp</result>
+		     <result name="input">/regist.jsp</result>
+		</action>
+		
+		<!-- 3.初始化首页 -->
+		<action name="weShare" class="shareShowAction" method="weShare">
+		     <result name="weshare">/index.jsp</result>
+		</action>
+		
+		<!-- 4.点击个人中心的方法 -->
+		<action name="showUser" class="userAction" method="showUser">
+		     <result name="person">/person.jsp</result>
+		     <result name="login">/login.jsp</result>
+		     <interceptor-ref name="loginCheck"/>
+		     <interceptor-ref name="defaultStack"/>
+		</action>
+		
+		<!-- 5.点击退出登录的方法 -->
+		<action name="quitLog" class="userAction" method="quitLog">
+		     <result name="index" type="redirect">weShare</result>
+		</action>
+		
+		<!-- 6.点击查看文件的方法 -->
+		<action name="showFiles" class="shareShowAction" method="showFiles">
+		     <result name="files">/detail.jsp</result>
+		</action>
+		
+		<!-- 7.搜索按钮 -->
+		<action name="searchFiles" class="fileAction" method="searchFiles">
+		     <result name="files">/detail.jsp</result>
+		</action>
+		
+		<!-- 8.上传文件按钮 -->
+		<action name="upLoadFile" class="fileAction" method="upLoadFile">
+		     <result name="person" type="redirect">showUser</result>
+		</action>
+		
+		<!-- 9.进入到上传页面里面 -->
+		<action name="toUpLoad" class="fileAction" method="toUpLoad">
+		     <result name="upload">/upload.jsp</result>
+		</action>
+		
+		<!-- 10.下载文件 -->
+		<action name="downLoadFile" class="fileAction" method="downLoadFile">
+		     <result name="detail" type="redirect" >showUser</result>
+		     <result name="index" type="redirect">weShare</result>
+		      <result name="person" type="redirect">showUser</result>
+		      <result name="login">/login.jsp</result>
+		     <interceptor-ref name="loginCheck"/>
+		     <interceptor-ref name="defaultStack"/>
+		</action>
+		
+		<!-- 11.导航栏上登录按钮的点击事件 -->
+		<action name="judge" class="userAction" method="judge">
+		     <result name="index" type="redirect">weShare</result>
+		     <result name="login">/login.jsp</result>
+		     <interceptor-ref name="loginCheck"/>
+		     <interceptor-ref name="defaultStack"/>
+		</action>
+		
+	</package>
+</struts>
+

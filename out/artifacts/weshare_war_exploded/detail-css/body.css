@@ -1,0 +1,152 @@
+/* 主体部分开始 */
+.personal {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* title部分开始 */
+.personal-title {
+    line-height: 40px;
+    font-size: 14px;
+    color: #666;
+}
+
+.personal-title a:hover {
+    color: #f00;
+}
+
+/* title部分结束 */
+
+/* body部分开始 */
+.personal-body {
+    width: 960px;
+    margin: 0 auto 50px;
+    padding-top: 20px;
+    background-color: #fff;
+}
+
+/* 资料展示栏开始 */
+.personal-body .file-display {
+    width: 860px;
+    margin: 0px auto;
+}
+
+.personal-body .file-display .file {
+    width: 860px;
+    height: 100px;
+    padding: 15px 0;
+    border-bottom: 1px solid #999;
+}
+
+.personal-body .file-display .file:last-child {
+    border: 0;
+}
+
+.personal-body .file-display .file-icon,
+.personal-body .file-display .file-name {
+    float: left;
+}  
+
+.personal-body .file-display .file-upload {
+    float: right;
+}
+
+.personal-body .file-icon {
+    padding-right: 20px;
+}
+
+.personal-body .file-icon .img-div {
+    width: 50px;
+    height: 70px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.personal-body .file-name span {
+    line-height: 70px;
+    color: #333;
+    font-size: 14px;
+}
+
+.personal-body .file-upload {
+    height: 70px;
+}
+
+.personal-body .file-upload div,
+.personal-body .file-upload a {
+    float: right;
+}
+
+.personal-body .file-upload .upload-man {
+    height: 70px;
+    color: #666;
+    font-size: 14px;
+}
+
+.personal-body .file-upload .upload-man span {
+    line-height: 70px;
+    position: relative;
+}
+
+.personal-body .file-upload .upload-man span:nth-child(3) {
+    color: #e0e0e0;
+    font-weight: 400;
+}
+
+.personal-body .file-upload .upload-man span:nth-child(1) {
+    width: 20px;
+    height: 15px;
+    display: inline-block;
+}
+
+.file-upload .upload-man span img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.personal-body .file-upload a {
+    display: block;
+    width: 46px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 5px;
+    border: 2px solid #afdcff;
+    background-color: #afdcff;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0 0 20px;
+}
+
+.personal-body .file-upload a:hover {
+    background-color: #fff;
+    color: #afdcff;
+}
+
+.personal-body .file-upload-txt {
+    height: 15px;
+    line-height: 15px;
+}
+
+.personal-body .file-upload-txt div {
+    float: left;
+    color: #666;
+    font-size: 12px;
+}
+
+.personal-body .file-upload-txt div:nth-child(2) {
+    width: 1px;
+    height: 15px;
+    border-left: 1px solid #e0e0e0;
+    margin: 0 10px;
+}
+
+.file-upload-txt div span:nth-child(2) {
+    color: #f00;
+}
+
+/* 资料展示栏结束 */
+
+/* body部分结束 */
+
+/* 主体部分结束 */

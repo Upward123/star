@@ -1,0 +1,97 @@
+/* 注册页面开始 */
+.regist-div {
+    margin: 0 auto;
+}
+
+.regist-div img {
+    display: block;
+    margin: 20px auto;
+}
+
+/* 注册框开始 */
+.regist-div .register-div {
+    margin: 20px auto;
+    width: fit-content;
+    border: 3px solid #afdcff;
+    border-radius: 50px;
+    background-color: #fff;
+}
+
+.register-div ul {
+    margin: 50px 100px;
+}
+
+.register-div ul li {
+    margin: 10px auto;
+    /* text-align: center; */
+}
+
+.register-div li .left-txt {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    color: #666;
+    font-size: 16px;
+}
+
+.register-div li input {
+    width: 170px;
+    height: 30px;
+    border: 1px solid #afdcff;
+    font-size: 12px;
+    outline: 0;
+}
+
+.register-div li .no-see-div,
+.register-div li .see-div {
+    display: inline-block;
+    position: relative;
+}
+
+.register-div .no-see-div img,
+.register-div .see-div img{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    margin: 0;
+}
+
+.register-div .right-txt {
+    color: red;
+    margin-left: 100px;
+    font-size: 12px;
+    display: block;
+    line-height: 30px;
+}
+
+/* 注册框结束 */
+
+.regist-div .button-div {
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+}
+
+.button-div button {
+    background-color: #afdcff;
+    color: #fff;
+    border: 2px solid #afdcff;
+    text-align: center;
+    border-radius: 10px;
+    width: 70px;
+    cursor: pointer;
+}
+
+.button-div button:hover{
+    background-color: #fff;
+    color: #afdcff;
+}
+
+.button-div button span {
+    line-height: 40px;
+    font-size: 16px; 
+}
+
+/* 注册页面结束 */

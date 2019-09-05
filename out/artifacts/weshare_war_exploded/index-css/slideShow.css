@@ -1,0 +1,217 @@
+/* 轮播图开始 */
+/* 左边开始 */
+.slideShow {
+    height: 580px;
+    background-color: #fff;
+}
+
+.slideShow-body {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.slideShow-left,
+.slideShow-right {
+    float: left;
+}
+
+.slideShow-left {
+    width: 255px;
+    height: 550px;
+    background-color: #8d8d8d;
+}
+
+.slideShow-left .f-ul {
+    margin-top: 35px;
+}
+
+.slideShow-left .f-li {
+    position: relative;
+}
+
+.slideShow-left .f-li:hover {
+    background-color: #afdcff;
+}
+
+.slideShow-left .f-li .f-a {
+    display: inline-block;
+    line-height: 60px;
+    width: 235px;
+    color: #fff;
+    padding-left: 20px;
+}
+
+
+.slideShow-left .f-li .f-span {
+    float: right;
+    margin-right: 20px;
+}
+
+/* 隐藏部分开始 */
+
+.slidehide {
+    width: 500px;
+    height: 550px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 255px;
+    top: 0;
+    padding: 70px 0 0 30px;
+    box-sizing: border-box;
+    z-index: 1;
+    display: none;
+}
+
+.slidehide ul {
+    position: relative;
+    left: 0px;
+    top: 0;
+}
+
+.slidehide li {
+    width: 220px;
+    height: 100px;
+    float: left;
+}
+
+.slidehide li a {
+    color: #fff;
+}
+
+.slidehide li a:hover {
+    color: #afdcff;
+}
+
+.slidehide li span {
+    display: inline-block;
+}
+
+.slidehide li span:first-child {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #afdcff;
+} 
+
+.slideShow-left li:hover .slidehide {
+    display: block;
+}
+
+
+/* 隐藏部分开始 */
+
+/* 左边结束 */
+
+/* 右边开始 */
+.slideShow-right {
+    width: 700px;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-img {
+    position: absolute;
+    left: 700px;
+    width: 100%;
+}
+
+.slide-img:nth-child(1){
+    left: 0;
+}
+
+.slideShow-right .slide-div span {
+    position: absolute;
+    height: 70px;
+    border-radius: 5px;
+    top: 230px;
+}
+
+.slideShow-right .slide-div span img {
+    margin: 7px 5px;
+}
+
+.slideShow-right .slide-div span:hover {
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 5px;
+}
+
+.slideShow-right .slide-div ul {
+    position: absolute;
+    bottom: 15px;
+    left: 282px;
+}
+
+.slideShow-right .slide-div li {
+    float: left;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 2px solid #afdcff;
+    margin: 0 15px;
+}
+
+.list .active {
+    background-color: rgba(255, 255, 255, 0.7)
+}
+
+.slideShow-right .slide-div li:hover{
+    background-color: rgba(255, 255, 255, 0.7)
+}
+
+/* 右边隐藏部分开始 */
+/* .slideShow-right .slidehide {
+    width: 500px;
+    height: 550px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 70px 0 0 30px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.slideShow-right .slidehide ul {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.slideShow-right .slidehide li {
+    width: 220px;
+    height: 100px;
+    float: left;
+}
+
+.slideShow-right .slidehide li a {
+    color: #fff;
+}
+
+.slideShow-right .slidehide li a:hover {
+    color: #afdcff;
+}
+
+.slideShow-right .slidehide li span {
+    display: inline-block;
+}
+
+.slideShow-right .slidehide li span:first-child {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #afdcff;
+} */
+
+/* 右边隐藏部分结束 */
+
+/* 右边结束 */
+
+/* 轮播图结束 */

@@ -1,0 +1,71 @@
+/* 鎼滅储鏍忛儴鍒嗗紑濮� */
+.search {
+    height: 130px;
+    background-color: #fff;
+}
+
+.search-body {
+    width: 960px;
+    height: 130px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    margin-top: 25px;
+    
+}
+
+.kuang {
+    position: absolute; 
+    width: 480px;
+    height: 70px;
+    left: 225px;
+    margin-top: 33px;
+}
+
+.kuang input {
+    float: left;
+}
+
+.in {
+    width: 370px;
+    height: 65px;
+    border: 2px solid #afdcff;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+    padding-left: 20px;
+    outline: 0;
+    color: #b0b0b0;
+    font-size: 14px;
+}
+
+.out {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    width: 110px;
+    height: 65px;
+    background-color: #afdcff;
+    border: 0;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.kuang img {
+    position: absolute;
+    right: 30px;
+    top: 10px; 
+}
+
+.star {
+    position: absolute;
+    right: 0;
+    margin-top: 25px;
+    
+}
+
+/* 鎼滅储鏍忛儴鍒嗙粨鏉� */

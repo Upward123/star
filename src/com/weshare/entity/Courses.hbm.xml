@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+ <hibernate-mapping>
+    <!-- hbm配置文件的作用是
+    	（1）映射类和表
+    	（2）映射属性和字段 
+    	 name:javaBeans类中的属性名字
+    	 column：数据库中的字段名字
+     -->
+	<class name="com.weshare.entity.Courses" table="01_Courses">
+    	<id name="CId" column="CId">
+    		<generator class="native" />
+    	</id>
+    	<property name="CCode" column="CCode"/>
+		<property name="CName" column="CName"/>
+		<property name="CourseImg" column="CourseImg"/>
+		
+		<!-- 课程(courses)-专业(profession) 多对一映射 -->
+		<many-to-one name="profession" column="ProfessionId"/>
+		
+		
+		<!-- 课程(courses)-资料(File) 一对多映射 -->
+		<!-- column 执行 Set 集合中的持久化类在表的外键列的名称 -->
+		<set name="file" cascade="all" lazy="false">
+		<key column="CourseId"/>
+		<one-to-many class="com.weshare.entity.FileCdut"/>
+		</set>
+    </class>
+</hibernate-mapping>
